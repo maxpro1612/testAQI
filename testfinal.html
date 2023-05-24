@@ -4,61 +4,88 @@
     <title>Pollution de l'air et santé</title>
 <style>
     .rectangle {
+      background-color: transparent;
       cursor: pointer;
       margin: 10px;
-      background-color : darkred;
-      opacity : 0.1;
-      
+	
+border : 0.15px solid black;
     }
 #rectangle1 {
- 	width: 903px;
-      height: 117px;
-      top: 121px;
-      left: 730px;
+ 	width: 857px;
+      height: 108px;
+      top: 220px;
+      left: 675px;
 	position : absolute;
 	z-index: 2;
     }
 
     #rectangle2 {
-	width: 903px;
-      height: 168px;
-      top: 239px;
-      left: 730px;
+	width: 857px;
+      height: 152px;
+      top: 330px;
+      left: 675px;
 	position : absolute;
 	z-index: 2;
     }
 #rectangle3 {
-	width: 903px;
-      height: 166px;
-      top: 408px;
-      left: 730px;
+	width: 857px;
+      height: 152px;
+      top: 484px;
+      left: 675px;
 	position : absolute;
 	z-index: 2;
     }
 
     #rectangle4 {
-	width: 903px;
-      height: 56px;
-      top: 575px;
-      left: 730px;
+	width: 857px;
+      height: 52px;
+      top: 638px;
+      left: 675px;
 	position : absolute;
 	z-index: 2;
     }
 #rectangle5 {
-	width: 903px;
-      height: 60px;
-      top: 632px;
-      left: 730px;
+	width: 857px;
+      height: 54px;
+      top: 692px;
+      left: 675px;
 	position : absolute;
 	z-index: 2;
     }
 
+.text-area {
+      position: absolute;
+      top: 0px;
+      left: 10%;
+      width: 80%;
+      height: 50px;
+      border: 1px solid black;
+      resize: none;
+      font-size : 25px;
+font-weight: bold;
+text-align : center;
+line-height: 200%;
+background-color : RGB(0,175,20);
+    }
 
+
+  .text-area2 {
+      position: absolute;
+      top: 850px;
+      left: 130px;
+      width: 1300px;
+      height: 100px;
+      border: 1px solid black;
+      resize: none;
+      font-size : 16px;
+    }
   </style>
   </head>
   <body>
-    	<img src="https://www.dropbox.com/s/spg82im10hns4e9/AQI_graph.jpg?raw=1" style="position: absolute; left: 00px; top: 0px; width: 750px; height: 750px;">
-	<img src="https://www.dropbox.com/s/ou5crzqztvqpe7j/Fig_cat_AFI.png?raw=1" style="position: absolute; left: 750px; top: 100px; width: 900px; height: 650px;">
+<header>
+      
+    	<img src="https://www.dropbox.com/s/spg82im10hns4e9/AQI_graph.jpg?raw=1" style="position: absolute; left: 10%; top: 8%; width: 40%; height: 60%;">
+	<img src="https://www.dropbox.com/s/ou5crzqztvqpe7j/Fig_cat_AFI.png?raw=1" style="position: absolute; left: 50%; top: 8%; width: 46%; height: 63%;">
   <a href="Categorie 1.html">
     <div id="rectangle1" class="rectangle"></div>
   </a>
@@ -75,6 +102,11 @@
     <div id="rectangle5" class="rectangle"></div>
   </a>
 
+<textarea class="text-area">Air quality and associated short-term health impact in Grenoble</textarea>
+ <textarea  class="text-area2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
 
 </body>
 </html>
+
+
+
