@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap">
 
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico:400,700&display=swap">
 
 
     <title>Pollution de l'air et santé</title>
@@ -207,11 +214,40 @@ background-color : RGB(170,255,170,0.6);
 body {
   background-color: rgb(242, 242, 242); /* Remplacez ces valeurs par les composantes RGB correspondant à votre teinte de gris */
 }
+
+
+  #date-time {
+     position : absolute;
+	z-index: 2;
+      top: 14px;
+      left: 18px;
+      font-size: 20px;
+color: white;
+      line-height: 1.2;
+
+}
+
   </style>
   </head>
   <body>
 
-<header>
+  <div id="date-time"></div>
+
+  <script>
+   function updateDateTime() {
+      var currentDate = new Date();
+      var date = currentDate.toLocaleDateString();
+      var hours = Math.floor(currentDate.getHours() / 4) * 4;
+      var minutes = '00'; 
+      var dateTimeString = '<div>Date: ' + date + '</div><div>Time: ' + hours + ':' + minutes + '</div>';
+      document.getElementById('date-time').innerHTML = dateTimeString;
+    }
+
+
+    setInterval(updateDateTime, 4 * 60 * 60 * 1000);
+
+    updateDateTime();
+  </script>
       
     	<img src="https://www.dropbox.com/s/spg82im10hns4e9/AQI_graph.jpg?raw=1" style="position: absolute; left: 165px; top: 80px; width: 650px; height: 650px;">
 	<img src="https://www.dropbox.com/s/ou5crzqztvqpe7j/Fig_cat_AFI.png?raw=1" style="position: absolute; left: 810px; top: 80px; width: 775px; height: 650px;">
