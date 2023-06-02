@@ -130,12 +130,13 @@ background-color : RGB(170,255,170,0.6);
 
   #date-time {
      position : absolute;
-	z-index: 2;
-      top: 16px;
-      left: 15px;
+      z-index: 2;
+      top: 14px;
+      left: 1430px;
       font-size: 20px;
-color: white;
+      color: white;
       line-height: 1.2;
+      text-align : right;
 
 }
 	
@@ -287,11 +288,12 @@ body {
 
   <script>
    function updateDateTime() {
+      var optionsDate = { weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric' };
       var currentDate = new Date();
-      var date = currentDate.toLocaleDateString();
+      var date = currentDate.toLocaleDateString('en-EN', optionsDate);
       var hours = Math.floor(currentDate.getHours() / 4) * 4;
       var minutes = '00'; 
-      var dateTimeString = '<div>Date: ' + date + '</div><div>Time: ' + hours + ':' + minutes + '</div>';
+      var dateTimeString = date + '</div><div>' + hours + ':' + minutes + '</div>';
       document.getElementById('date-time').innerHTML = dateTimeString;
     }
 
