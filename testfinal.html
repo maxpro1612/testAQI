@@ -11,8 +11,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap">
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico:400,700&display=swap">
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica+Neue:400,700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica:400,700&display=swap">
 
     <title>Pollution de l'air et santé</title>
 <style>
@@ -96,8 +96,7 @@ text-align : center;
 line-height: 200%;
 background-color : RGB(0,175,20,0.7);
 color : white;
-font-family:Arial ;
-
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 
 
     }
@@ -128,18 +127,6 @@ background-color : RGB(170,255,170,0.6);
     }
 
 
-  #date-time {
-     position : absolute;
-	z-index: 2;
-      top: 16px;
-      left: 15px;
-      font-size: 20px;
-color: white;
-      line-height: 1.2;
-
-}
-	
-	
 @media (orientation: portrait) {
 
 
@@ -157,59 +144,59 @@ border : 0.15px solid black;
 
 .image1 {
 	position: absolute;
-	left: 175px;
-	top: 182px;
-	width: 1300px;
-	height: 1300px;
+	left: 165px;
+	top: 80px;
+	width: 650px;
+	height: 650px;
 }
 
 .image2 {
 	position: absolute;
-	left: 175px;
-	top: 1507px;
-	width: 1300px;
-	height: 1050px;
+	left: 810px;
+	top: 80px;
+	width: 757px;
+	height: 650px;
 }
 
 #rectangle1 {
- 	width: 1285px;
-      height: 185px;
-      top: 1556px;
-      left: 165px;
+ 	width: 790px;
+      height: 123px;
+      top: 109px;
+      left: 790px;
 	position : absolute;
 	z-index: 2;
     }
 
     #rectangle2 {
-	width: 1285px;
-      height: 253px;
-      top: 1750px;
-      left: 165px;
+	width: 790px;
+      height: 170px;
+      top: 237px;
+      left: 790px;
 	position : absolute;
 	z-index: 2;
     }
 #rectangle3 {
-	width: 1285px;
-      height: 254px;
-      top: 2012px;
-      left: 165px;
+	width: 790px;
+      height: 170px;
+      top: 412px;
+      left: 790px;
 	position : absolute;
 	z-index: 2;
     }
 
     #rectangle4 {
-	width: 1285px;
-      height: 82px;
-      top: 2275px;
-      left: 165px;
+	width: 790px;
+      height: 55px;
+      top: 587px;
+      left: 790px;
 	position : absolute;
 	z-index: 2;
     }
 #rectangle5 {
-	width: 1285px;
-      height: 94px;
-      top: 2366px;
-      left: 165px;
+	width: 790px;
+      height: 64px;
+      top: 647px;
+      left: 790px;
 	position : absolute;
 	z-index: 2;
     }
@@ -218,20 +205,17 @@ border : 0.15px solid black;
       position: absolute;
       top: 10px;
       left: 10px;
-      width: 800px;
-      height: 150px;
+      width: 1550px;
+      height: 50px;
       border: 2px solid black;
       resize: none
       font-size : 25px;
 font-weight: bold;
 text-align : center;
-line-height: 300%;
+line-height: 200%;
 background-color : RGB(0,175,20,0.7);
 color : white;
 font-family: Arial;
-overflow-wrap: break-word;
-padding-left: 330px;
-padding-right: 330px;
 
 
     }
@@ -239,38 +223,27 @@ padding-right: 330px;
 
   .text-area2 {
       position: absolute;
-      top: 2582px;
+      top: 850px;
       left: 200px;
-      width: 1225px;
+      width: 1300px;
       height: 100px;
       border: 1px solid black;
       resize: none;
-      font-size : 8px;
+      font-size : 16px;
     }
 
 .text-area3 {
       position: absolute;
-      top: 180px;
+      top: 80px;
       left: 10px;
       width: 140px;
-      height: 2500px;
+      height: 3000px;
       border: 2px solid rgb(0,110,90, 0.6);
 border-radius: 5px;
       resize: none;
       font-size : 16px;
 background-color : RGB(170,255,170,0.6);
     }
-	
-  #date-time {
-     position : absolute;
-	z-index: 2;
-      top: 30px;
-      left: 30px;
-      font-size: 30px;
-color: white;
-      line-height: 2;
-
-}
 
 }
 
@@ -279,6 +252,17 @@ body {
 }
 
 
+  #date-time {
+     position : absolute;
+      z-index: 2;
+      top: 14px;
+      left: 1400px;
+      font-size: 20px;
+      color: white;
+      line-height: 1.2;
+      text-align : right;
+
+}
 
   </style>
   </head>
@@ -287,11 +271,12 @@ body {
 
   <script>
    function updateDateTime() {
+      var optionsDate = { weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric' };
       var currentDate = new Date();
-      var date = currentDate.toLocaleDateString();
+      var date = currentDate.toLocaleDateString('en-EN', optionsDate);
       var hours = Math.floor(currentDate.getHours() / 4) * 4;
       var minutes = '00'; 
-      var dateTimeString = '<div>Date: ' + date + '</div><div>Time: ' + hours + ':' + minutes + '</div>';
+      var dateTimeString = date + '</div><div>' + hours + ':' + minutes + '</div>';
       document.getElementById('date-time').innerHTML = dateTimeString;
     }
 
@@ -304,8 +289,6 @@ body {
       
     	<img src="https://www.dropbox.com/s/spg82im10hns4e9/AQI_graph.jpg?raw=1" class="image1">
 	<img src="https://www.dropbox.com/s/ou5crzqztvqpe7j/Fig_cat_AFI.png?raw=1" class="image2">
-	  
-    <a href="Categorie 1.html">
     <div id="rectangle1" class="rectangle"></div>
   </a>
   <a href="Categorie 2.html">
