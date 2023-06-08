@@ -132,7 +132,8 @@ background-color : RGB(170,255,170,0.6);
      position : absolute;
       z-index: 2;
       top: 14px;
-      left: 1430px;
+      left: 1300px;
+	width: 250px;
       font-size: 20px;
       color: white;
       line-height: 1.2;
@@ -264,13 +265,16 @@ background-color : RGB(170,255,170,0.6);
 	
   #date-time {
      position : absolute;
-	z-index: 2;
-      top: 30px;
-      left: 30px;
-      font-size: 30px;
-color: white;
-      line-height: 2;
-	  text-align : left;
+      z-index: 2;
+      top: 14px;
+      left: 1300px;
+	width: 250px;
+      font-size: 20px;
+      color: white;
+      line-height: 1.2;
+      text-align : right;
+
+}
 
 }
 
@@ -285,7 +289,7 @@ body {
   </style>
   </head>
   <body>
- <div id="date-time"></div>
+ <div id="date-time">
 
   <script>
    function updateDateTime() {
@@ -294,16 +298,15 @@ body {
       var date = currentDate.toLocaleDateString('en-EN', optionsDate);
       var hours = Math.floor(currentDate.getHours() / 4) * 4;
       var minutes = '00'; 
-      var dateTimeString = date + '</div><div>' + hours + ':' + minutes + '</div>';
+      var dateTimeString = date + '</div><div>' + hours + ':' + minutes + '';
       document.getElementById('date-time').innerHTML = dateTimeString;
     }
-
 
     setInterval(updateDateTime, 4 * 60 * 60 * 1000);
 
     updateDateTime();
   </script>
- 
+ </div>
       
     	<img src="https://www.dropbox.com/s/spg82im10hns4e9/AQI_graph.jpg?raw=1" class="image1">
 	<img src="https://www.dropbox.com/s/ou5crzqztvqpe7j/Fig_cat_AFI.png?raw=1" class="image2">
