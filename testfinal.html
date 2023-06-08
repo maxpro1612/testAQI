@@ -127,7 +127,6 @@ border-radius: 5px;
 background-color : RGB(170,255,170,0.6);
     }
 
-
   #date-time {
      position : absolute;
       z-index: 2;
@@ -278,8 +277,6 @@ background-color : RGB(170,255,170,0.6);
 
 }
 
-}
-
 body {
   background-color: rgb(242, 242, 242);
 }
@@ -289,7 +286,7 @@ body {
   </style>
   </head>
   <body>
- <div id="date-time">
+ <div id="date-time"></div>
 
   <script>
    function updateDateTime() {
@@ -298,15 +295,16 @@ body {
       var date = currentDate.toLocaleDateString('en-EN', optionsDate);
       var hours = Math.floor(currentDate.getHours() / 4) * 4;
       var minutes = '00'; 
-      var dateTimeString = date + '</div><div>' + hours + ':' + minutes + '';
+      var dateTimeString = date + '</div><div>' + hours + ':' + minutes + '</div>';
       document.getElementById('date-time').innerHTML = dateTimeString;
     }
+
 
     setInterval(updateDateTime, 4 * 60 * 60 * 1000);
 
     updateDateTime();
   </script>
- </div>
+ 
       
     	<img src="https://www.dropbox.com/s/spg82im10hns4e9/AQI_graph.jpg?raw=1" class="image1">
 	<img src="https://www.dropbox.com/s/ou5crzqztvqpe7j/Fig_cat_AFI.png?raw=1" class="image2">
