@@ -105,7 +105,7 @@ font-family:Arial ;
 
   .text-area2 {
       position: absolute;
-      top: 850px;
+      top: 750px;
       left: 200px;
       width: 1300px;
       height: 100px;
@@ -119,7 +119,7 @@ font-family:Arial ;
       top: 80px;
       left: 10px;
       width: 140px;
-      height: 900px;
+      height: 770px;
       border: 2px solid rgb(0,110,90, 0.6);
 border-radius: 5px;
       resize: none;
@@ -265,17 +265,19 @@ background-color : RGB(170,255,170,0.6);
 	
   #date-time {
      position : absolute;
-	z-index: 2;
-      top: 30px;
-      left: 30px;
-      font-size: 30px;
-color: white;
-      line-height: 2;
-	  text-align : left;
+      z-index: 2;
+      top: 14px;
+      left: 1300px;
+	width: 250px;
+      font-size: 20px;
+      color: white;
+      line-height: 1.2;
+      text-align : right;
 
 }
 
 }
+
 
 body {
   background-color: rgb(242, 242, 242);
@@ -286,7 +288,7 @@ body {
   </style>
   </head>
   <body>
- <div id="date-time"></div>
+ <div id="date-time">
 
   <script>
    function updateDateTime() {
@@ -295,16 +297,15 @@ body {
       var date = currentDate.toLocaleDateString('en-EN', optionsDate);
       var hours = Math.floor(currentDate.getHours() / 4) * 4;
       var minutes = '00'; 
-      var dateTimeString = date + '</div><div>' + hours + ':' + minutes + '</div>';
+      var dateTimeString = date + '</div><div>' + hours + ':' + minutes + '';
       document.getElementById('date-time').innerHTML = dateTimeString;
     }
-
 
     setInterval(updateDateTime, 4 * 60 * 60 * 1000);
 
     updateDateTime();
   </script>
- 
+ </div>
       
     	<img src="https://www.dropbox.com/s/spg82im10hns4e9/AQI_graph.jpg?raw=1" class="image1">
 	<img src="https://www.dropbox.com/s/ou5crzqztvqpe7j/Fig_cat_AFI.png?raw=1" class="image2">
@@ -325,8 +326,19 @@ body {
     <div id="rectangle5" class="rectangle"></div>
   </a>
 
-<textarea class="text-area">Air quality and associated short-term health impact in Grenoble</textarea>
+<textarea class="text-area">Air quality with associated short-term health impact in Grenoble</textarea>
  <textarea  class="text-area2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
-<textarea class="text-area3"></textarea>
+<textarea class="text-area3">
+
+
+O3 : Ozone
+
+NO2: Nitrogen dioxide
+
+SO2: Sulfur dioxide
+
+PM10: Particular matter 10μm
+
+PM2.5 : Particular matter 2.5μm</textarea>
 </body>
 </html>
