@@ -140,6 +140,17 @@ background-color : RGB(170,255,170,0.6);
       text-align : right;
 
 }
+
+
+  .segment {
+    position : absolute;
+    top: 450px;
+    left: 11px;
+    width: 146px;
+    height: 2px;
+    background-color:rgb(0,110,90, 0.6);
+  }
+
 	
 	
 @media (orientation: portrait) {
@@ -289,7 +300,6 @@ body {
   </head>
   <body>
  <div id="date-time">
-
   <script>
    function updateDateTime() {
       var optionsDate = { weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric' };
@@ -326,9 +336,11 @@ body {
     <div id="rectangle5" class="rectangle"></div>
   </a>
 
-<textarea class="text-area">Air quality with attributable short-term health impacts in Grenoble</textarea>
- <textarea  class="text-area2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
-<textarea class="text-area3">
+<textarea class="text-area">Air quality with associated short-term health impact in Grenoble</textarea>
+ <textarea  class="text-area2">The displayed time in the top right corner indicates the time at which the charts are updated.
+The charts reflect the pollutant concentrations of the past 24 hours.
+The figure on the left shows the air quality index of the city of Grenoble, while the figure on the right represents the health impact of pollutant concentrations.</textarea>
+<textarea class="text-area3">Air pollutant
 
 
 O3: Ozone
@@ -339,6 +351,12 @@ SO2: Sulfur dioxide
 
 PM10: Particular matter 10μm
 
-PM2.5: Particular matter 2.5μm</textarea>
+PM2.5 : Particular matter 2.5μm
+
+
+
+Click on the health classes for more detail</textarea>
+
+<div class="segment"></div>
 </body>
 </html>
